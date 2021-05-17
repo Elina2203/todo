@@ -59,7 +59,7 @@ a {
 .todo {
   font-size: 18px;
   border: none;
-  max-width: 271px;
+  width: 271px;
   padding-right: 10px;
   /* border-bottom: 1px solid rgba(37, 42, 49, 0.1); */
   padding-top: 18px;
@@ -69,7 +69,10 @@ a {
   position: relative;
   display: inline-block;
 }
-
+.List-span {
+  color: rgba(37, 42, 49, 0.5);
+  margin-left: 60px;
+}
 .tasks {
   height: 69px;
   width: 301px;
