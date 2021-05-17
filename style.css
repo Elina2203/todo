@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --black: #252a31;
+  --blue: #006cff;
+  --violet: #b678ff;
+  --white: #ffffff;
+  --yellow: #ffe761;
+  --red: #f45e6d;
+  --green: #61dea4;
+  --light-grey: #ebeff5;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: grey;
+  font-size: 18px;
+}
+
+.app {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 375px;
+  height: 812px;
+  background-color: var(--white);
+  padding-top: 60px;
+  padding-bottom: 44px;
+}
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-right: 13.5px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+/* Список запланированных задач */
+
+.todo-list {
+  padding-left: 18px;
+  padding-right: 16px;
+}
+.rectangle {
+  margin-left: 42px;
+}
+.todo {
+  font-size: 18px;
+  border: none;
+  max-width: 271px;
+  padding-right: 10px;
+  /* border-bottom: 1px solid rgba(37, 42, 49, 0.1); */
+  padding-top: 18px;
+  margin-left: 18px;
+}
+.list .two {
+  position: relative;
+  display: inline-block;
+}
+
+.tasks {
+  height: 69px;
+  width: 301px;
+  border-radius: 10px;
+  margin-left: 58px;
+  margin-bottom: 8px;
+  padding-top: 12px;
+  padding-left: 16px;
+}
+span.dark {
+  color: rgba(37, 42, 49, 0.5);
+  font-size: 14px;
+}
+span.light {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+.tasks.inbox {
+  background-color: var(--light-grey);
+}
+.tasks.inbox p {
+  color: black;
+}
+
+.tasks.work {
+  background-color: var(--green);
+}
+.tasks.work p {
+  color: var(--white);
+}
+.tasks.shopping {
+  background-color: var(--red);
+}
+.tasks.shopping p {
+  color: var(--white);
+}
+.tasks.family {
+  background-color: var(--yellow);
+}
+.tasks.family p {
+  color: black;
+}
+.tasks.personal {
+  background-color: var(--violet);
+}
+.tasks.personal p {
+  color: var(--white);
+}
+
+.btn-plus svg.plus {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+}
+.btn-plus svg.plus.active {
+  display: none;
+}
+.checkbox-round {
+  top: 18px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 100%;
+  vertical-align: middle;
+  border: 1px solid rgba(218, 218, 218, 1);
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round .checked {
+  border-color: var(--blue);
+}
