@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do list</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
   </head>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="fonts.css" />
+
   <body>
     <div class="app">
+      <!-- Header -->
       <div class="app-header">
-        <div class="header-title">Today</div>
-        <div class="header-menu">
+        <div class="header__title">Today</div>
+        <div class="header__menu">
           <svg
             width="24"
             height="24"
@@ -28,283 +30,101 @@
           </svg>
         </div>
       </div>
-      <div class="todo-list">
-        <ul id="myUl">
-          <li class="list">
-            <input type="checkbox" class="checkbox-round checked" />
-            <input
-              type="text"
-              class="todo"
-              value="Start making a presentation"
-            />
-
-            <svg
-              id="work"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
-                fill="#61DEA4"
-              />
-            </svg>
-            <svg
-              class="rectangle"
-              width="315"
-              height="1"
-              viewBox="0 0 315 1"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect opacity="0.1" width="315" height="1" fill="#252A31" />
-            </svg>
-          </li>
-          <li class="list two">
-            <input type="checkbox" class="checkbox-round checked" />
-            <input type="text" class="todo" value="Pay for rent" />
-            <img src="icons/personal.png" alt="" />
-
-            <svg
-              class="time"
-              width="14"
-              height="13"
-              viewBox="0 0 14 13"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12.5 7C12.5 10.0376 10.0376 12.5 7 12.5C3.96243 12.5 1.5 10.0376 1.5 7C1.5 3.96243 3.96243 1.5 7 1.5C10.0376 1.5 12.5 3.96243 12.5 7Z"
-                stroke="#252A31"
-              />
-              <path d="M7 4V7" stroke="#252A31" stroke-linecap="round" />
-              <path d="M9 7H7" stroke="#252A31" stroke-linecap="round" />
-              <path
-                d="M13 2.5L11.5 1"
-                stroke="#252A31"
-                stroke-linecap="round"
-              />
-              <path d="M1 2.5L2.5 1" stroke="#252A31" stroke-linecap="round" />
-            </svg>
-
-            <input class="time" type="text" placeholder="7:00 pm" />
-            <svg
-              class="rectangle"
-              width="315"
-              height="1"
-              viewBox="0 0 315 1"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect opacity="0.1" width="315" height="1" fill="#252A31" />
-            </svg>
-          </li>
-          <li class="list">
-            <input type="checkbox" class="checkbox-round checked" />
-
-            <input type="text" class="todo" value="Buy a milk" />
-            <img src="icons/shopping.png" alt="" />
-            <svg
-              class="rectangle"
-              width="315"
-              height="1"
-              viewBox="0 0 315 1"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect opacity="0.1" width="315" height="1" fill="#252A31" />
-            </svg>
-          </li>
-          <li>
-            <input type="checkbox" class="checkbox-round checked" />
-            <input
-              type="text"
-              class="todo"
-              value="Don’t forget to pick up Mickael from school"
-            />
-            <svg
-              class="rectangle"
-              width="315"
-              height="1"
-              viewBox="0 0 315 1"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect opacity="0.1" width="315" height="1" fill="#252A31" />
-            </svg>
-          </li>
-          <li class="list">
-            <input type="checkbox" class="checkbox-round checked" />
-
-            <input
-              type="text"
-              class="todo"
-              value="Buy a chocolate for Charlotte"
-            />
-            <img src="icons/shopping.png" alt="" />
-            <svg
-              class="rectangle"
-              width="315"
-              height="1"
-              viewBox="0 0 315 1"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect opacity="0.1" width="315" height="1" fill="#252A31" />
-            </svg>
-          </li>
-        </ul>
-      </div>
-      <span class="List-span">Lists</span>
-      <div class="lists">
+      <div class="list">
         <ul>
-          <li class="tasks inbox" id="inbox">
-            <a href="#"><p>Inbox</p></a>
-            <span class="dark">1 task</span>
+          <li class="list__item">
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input" />
+              <span class="checkbox__symbol">✓</span>
+            </label>
+            <div class="list__text">
+              <textarea wrap="soft" name="" id="" cols="33" rows="">
+                Start making a presentation</textarea
+              >
+              <div class="circle"></div>
+            </div>
           </li>
-          <li class="tasks work" id="work">
-            <a href="#"><p>Work</p></a>
-            <span class="light">1 task</span>
+          <li class="list__item">
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input" />
+              <span class="checkbox__symbol">✓</span>
+            </label>
+            <div class="list__text">
+              <textarea name="" id="" cols="33" rows="">
+                Pay for rent</textarea
+              >
+              <div class="circle"></div>
+            </div>
           </li>
-          <li class="tasks shopping" id="shopping">
-            <a href="#"><p>Shopping</p></a>
-            <span class="light">1 task</span>
+          <li class="list__item">
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input" />
+              <span class="checkbox__symbol">✓</span>
+            </label>
+            <div class="list__text">
+              <textarea name="" id="" cols="33" rows="">
+                Buy a milk</textarea
+              >
+              <div class="circle work"></div>
+            </div>
           </li>
-          <li class="tasks family" id="family">
-            <a href="#"><p>Family</p></a>
-            <span class="dark">1 task</span>
+          <li class="list__item">
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input" />
+              <span class="checkbox__symbol">✓</span>
+            </label>
+            <div class="list__text">
+              <textarea name="" id="" cols="33" rows="">
+                Don’t forget to pick up Mickael from school</textarea
+              >
+              <div class="circle"></div>
+            </div>
           </li>
-          <li class="tasks personal" id="personal">
-            <a href="#"><p>Personal</p></a>
-            <span class="light">1 task</span>
+          <li class="list__item">
+            <label class="checkbox">
+              <input type="checkbox" class="checkbox__input" />
+              <span class="checkbox__symbol">✓</span>
+            </label>
+            <div class="list__text">
+              <textarea name="" id="" cols="33" rows="">
+                Buy a chocolate for Charlotte</textarea
+              >
+              <div class="circle"></div>
+            </div>
           </li>
         </ul>
-
-        <button id="btn-plus" class="btn-plus">
-          <svg
-            class="plus"
-            width="112"
-            height="116"
-            viewBox="0 0 112 116"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g filter="url(#filter0_d)">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M64 72C81.6731 72 96 57.6731 96 40C96 22.3269 81.6731 8 64 8C46.3269 8 32 22.3269 32 40C32 57.6731 46.3269 72 64 72Z"
-                fill="white"
-              />
-            </g>
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M65 37C65 38.1046 65.8954 39 67 39H72C72.5523 39 73 39.4477 73 40C73 40.5523 72.5523 41 72 41H67C65.8954 41 65 41.8954 65 43V48C65 48.5523 64.5523 49 64 49C63.4477 49 63 48.5523 63 48V43C63 41.8954 62.1046 41 61 41H56C55.4477 41 55 40.5523 55 40C55 39.4477 55.4477 39 56 39H61C62.1046 39 63 38.1046 63 37V32C63 31.4477 63.4477 31 64 31C64.5523 31 65 31.4477 65 32V37Z"
-              fill="#006CFF"
-            />
-            <defs>
-              <filter
-                id="filter0_d"
-                x="0"
-                y="0"
-                width="128"
-                height="128"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feColorMatrix
-                  in="SourceAlpha"
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                />
-                <feOffset dy="24" />
-                <feGaussianBlur stdDeviation="16" />
-                <feColorMatrix
-                  type="matrix"
-                  values="0 0 0 0 0.0839038 0 0 0 0 0.138901 0 0 0 0 0.218341 0 0 0 0.16 0"
-                />
-                <feBlend
-                  mode="normal"
-                  in2="BackgroundImageFix"
-                  result="effect1_dropShadow"
-                />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="effect1_dropShadow"
-                  result="shape"
-                />
-              </filter>
-            </defs>
-          </svg>
-          <!-- Button class active -->
-          <svg
-            class="plus active"
-            width="112"
-            height="116"
-            viewBox="0 0 112 116"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g filter="url(#filter0_d)">
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M86.6274 62.6274C99.1242 50.1306 99.1242 29.8694 86.6274 17.3726C74.1306 4.87581 53.8693 4.87581 41.3725 17.3726C28.8758 29.8694 28.8758 50.1306 41.3725 62.6274C53.8693 75.1242 74.1306 75.1242 86.6274 62.6274Z"
-                fill="#006CFF"
-              />
-            </g>
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M62.5857 37.1716C63.3667 37.9526 64.6331 37.9526 65.4141 37.1716L68.9496 33.636C69.3402 33.2455 69.9733 33.2455 70.3639 33.636C70.7544 34.0266 70.7544 34.6597 70.3639 35.0503L66.8283 38.5858C66.0473 39.3668 66.0473 40.6332 66.8283 41.4142L70.3639 44.9497C70.7544 45.3403 70.7544 45.9734 70.3639 46.364C69.9733 46.7545 69.3402 46.7545 68.9496 46.364L65.4141 42.8284C64.6331 42.0474 63.3667 42.0474 62.5857 42.8284L59.0501 46.364C58.6596 46.7545 58.0265 46.7545 57.6359 46.364C57.2454 45.9734 57.2454 45.3403 57.6359 44.9497L61.1715 41.4142C61.9525 40.6332 61.9525 39.3668 61.1715 38.5858L57.6359 35.0503C57.2454 34.6597 57.2454 34.0266 57.6359 33.636C58.0265 33.2455 58.6596 33.2455 59.0501 33.636L62.5857 37.1716Z"
-              fill="white"
-            />
-            <defs>
-              <filter
-                id="filter0_d"
-                x="0"
-                y="0"
-                width="128"
-                height="128"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feColorMatrix
-                  in="SourceAlpha"
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                />
-                <feOffset dy="24" />
-                <feGaussianBlur stdDeviation="16" />
-                <feColorMatrix
-                  type="matrix"
-                  values="0 0 0 0 0.0839038 0 0 0 0 0.138901 0 0 0 0 0.218341 0 0 0 0.16 0"
-                />
-                <feBlend
-                  mode="normal"
-                  in2="BackgroundImageFix"
-                  result="effect1_dropShadow"
-                />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="effect1_dropShadow"
-                  result="shape"
-                />
-              </filter>
-            </defs>
-          </svg>
+        </div>
+        <div class="tasks">
+          <span class="tasks__span">Lists</span>
+           <div class="tasks__items">
+             <ul>
+              <li class="tasks inbox" id="inbox">
+                <a href="#">Inbox</a>
+                <div class="tasks__number dark">1 task</div>
+              </li>
+              <li class="tasks work" id="work">
+                <a href="#">Work</a>
+                <div class="tasks__number light">1 task</div>
+              </li>
+              <li class="tasks shopping" id="shopping">
+                <a href="#">Shopping</a>
+                <div class="tasks__number light">1 task</div>
+              </li>
+              <li class="tasks family" id="family">
+                <a href="#">Family
+                <div class="tasks__number dark">1 task</div>
+              </li>
+              <li class="tasks personal" id="personal">
+                <a href="#">Personal</a>
+                <div class="tasks__number light">1 task</div>
+              </li>
+             </ul>
+        </div>
+        <button class="btn__plus">
+          <span class="btn__symbol">+</span>
         </button>
-      </div>
-    </div>
-    <script src="dist/main.js"></script>
+  </div>
+      
+   
   </body>
 </html>
