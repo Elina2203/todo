@@ -121,7 +121,20 @@ span.light {
 .tasks.personal p {
   color: var(--white);
 }
-
+.list.two {
+  position: relative;
+}
+input.time {
+  position: absolute;
+  top: 40px;
+  left: 65px;
+  border: none;
+}
+svg.time {
+  position: absolute;
+  top: 40px;
+  left: 45px;
+}
 .btn-plus svg.plus {
   position: absolute;
   bottom: 30px;
