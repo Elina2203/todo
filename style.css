@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+input,
+textarea,
+button {
+  font-family: inherit;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -31,9 +35,9 @@ body {
 .app {
   position: absolute;
   min-width: 375px;
-  height: 100%;
+  height: 100vh;
   background-color: var(--white);
-  padding-top: 30px;
+  padding-top: 60px;
   padding-left: 18px;
 }
 .header__title {
@@ -47,13 +51,14 @@ body {
 
 li.list__item {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-between;
   align-items: center;
+  margin: 1 1 auto;
 }
 .checkbox {
   display: inline-flex;
-  border: 1px solid #000;
+  border: 2px solid #dadada;
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -74,7 +79,7 @@ li.list__item {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  margin: 12px;
+  margin: 0 12px 12px 12px;
   background-color: var(--violet);
 }
 .inbox {
@@ -94,19 +99,19 @@ li.list__item {
 }
 .list__text {
   display: flex;
-  padding: 18px 0;
+  padding-top: 18px;
   border-bottom: 2px solid rgba(37, 42, 49, 0.3);
 }
 textarea {
-  text-align: start;
   border: none;
+  margin-right: 30px;
 }
 .tasks__items {
   margin: 8px auto;
 }
 .tasks__span {
   color: rgba(37, 42, 49, 0.5);
-  margin-bottom: 15px;
+  margin: 32px 0 15px 0;
 }
 .tasks {
   height: 69px;
@@ -145,7 +150,7 @@ textarea {
   height: 64px;
   bottom: 44px;
   border-radius: 50%;
-  /* border-color: transparent; */
+  border-color: transparent;
   background-color: var(--white);
 }
 .btn__symbol {
